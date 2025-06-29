@@ -9,3 +9,4 @@ schedule function diamondrun:system/start/countdown/3 20
 schedule function diamondrun:system/start/countdown/2 40
 schedule function diamondrun:system/start/countdown/1 60
 schedule function diamondrun:system/start/countdown/0 80
+schedule function diamondrun:game/timer/ready 80

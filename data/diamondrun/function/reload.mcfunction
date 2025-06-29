@@ -9,3 +9,21 @@ weather clear
 gamerule fallDamage true
 gamerule doMobSpawning true
 difficulty easy
+
+## タイマー
+# 準備時間タイマー
+scoreboard objectives add ready_time dummy
+scoreboard players set @a ready_time -1
+
+# 対戦時間タイマー
+scoreboard objectives add battle_time dummy
+scoreboard players set @a battle_time -1
+
+# クールタイムタイマー
+scoreboard objectives add cooltime_time dummy
+scoreboard players set @a cooltime_time -1
+
+#ボスバー非表示
+bossbar set ready_timer visible false
+bossbar set battle_timer visible false
+bossbar set cooltime_timer visible false
