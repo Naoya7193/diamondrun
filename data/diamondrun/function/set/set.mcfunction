@@ -43,8 +43,8 @@ setblock ~-1 ~ ~-9 minecraft:oak_wall_sign[facing=east,waterlogged=false]{back_t
 # setblock ~-2 ~1 ~-9 oak_button[face=floor, facing=west, powered=false]
 
 #システム部分
-setblock ~0 ~ ~10 smooth_stone
-setblock ~0 ~1 ~10 oak_button[face=floor, facing=north, powered=false]
+fill ~ ~ ~10 ~ ~1 ~10 smooth_stone
+setblock ~ ~1 ~9 minecraft:oak_wall_sign[facing=north,waterlogged=false]{back_text:{color:"black",has_glowing_text:0b,messages:['""','""','""','""']},front_text:{color:"black",has_glowing_text:1b,messages:['""','{"bold":true,"clickEvent":{"action":"run_command","value":"/function diamondrun:system/start/start"},"color":"black","text":"[ START ]"}','""','""']},is_waxed:0b}
 
 #セット生成時のエンティティを削除
 kill @e[type=item]
