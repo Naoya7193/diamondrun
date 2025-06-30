@@ -10,3 +10,8 @@ bossbar set battle_timer players @a
 bossbar set battle_timer color red
 bossbar set battle_timer style notched_10
 bossbar set battle_timer max 36000
+
+## カウントダウンを実行
+schedule function diamondrun:system/start/countdown/3 440
+schedule function diamondrun:system/start/countdown/2 460
+schedule function diamondrun:system/start/countdown/1 480

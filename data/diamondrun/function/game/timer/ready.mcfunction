@@ -7,3 +7,8 @@ bossbar set ready_timer players @a
 bossbar set ready_timer color yellow
 bossbar set ready_timer style notched_10
 bossbar set ready_timer max 6000
+
+## カウントダウンを実行
+schedule function diamondrun:system/start/countdown/3 440
+schedule function diamondrun:system/start/countdown/2 460
+schedule function diamondrun:system/start/countdown/1 480
