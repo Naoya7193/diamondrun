@@ -11,6 +11,9 @@ bossbar set cooltime_timer color yellow
 bossbar set cooltime_timer style notched_10
 bossbar set cooltime_timer max 1200
 
+# 結果発表
+function diamondrun:system/count/diamond
+
 ## カウントダウンを実行
 schedule function diamondrun:system/start/countdown/3 440
 schedule function diamondrun:system/start/countdown/2 460

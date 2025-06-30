@@ -27,3 +27,13 @@ scoreboard players set @a cooltime_time -1
 bossbar set ready_timer visible false
 bossbar set battle_timer visible false
 bossbar set cooltime_timer visible false
+
+## ダイヤモンドの個数スコア
+scoreboard objectives add diamond dummy
+scoreboard players set @a diamond 0
+
+## 残り人数
+scoreboard objectives add remain dummy
+
+# 仮
+scoreboard objectives setdisplay sidebar diamond

@@ -3,3 +3,6 @@ execute if entity @s[tag=light_blue] run tellraw @s [{"text": "[!]","bold":true,
 
 execute if entity @s[tag=player,tag=light_blue] run tag @s remove player
 execute if entity @s[tag=light_blue] run tag @s remove light_blue
+
+# 参加人数を記録
+scoreboard players remove @s remain 1

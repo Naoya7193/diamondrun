@@ -11,6 +11,9 @@ bossbar set battle_timer color red
 bossbar set battle_timer style notched_10
 bossbar set battle_timer max 36000
 
+# playerタグが付いている人のダイヤモンドのスコアをリセット
+scoreboard players set @e[tag=player] diamond 0
+
 ## カウントダウンを実行
 schedule function diamondrun:system/start/countdown/3 440
 schedule function diamondrun:system/start/countdown/2 460

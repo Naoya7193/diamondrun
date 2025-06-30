@@ -9,15 +9,16 @@ execute if entity @a[scores={ready_time=0}] run function diamondrun:game/timer/b
 # 対戦時間用のタイマー
 scoreboard players remove @a[scores={battle_time=0..}] battle_time 1
 execute store result bossbar battle_timer value run scoreboard players get @p battle_time
-
 execute if entity @a[scores={battle_time=0}] run bossbar remove battle_timer
 execute if entity @a[scores={battle_time=0}] run title @a title "- 試合終了 -"
-execute if entity @a[scores={battle_time=0}] run function diamondrun:game/timer/cooltime
+execute unless score @p remain matches 1 if entity @a[scores={battle_time=0}] run function diamondrun:game/timer/cooltime
 
-# 対戦時間用のタイマー
+# 終了メッセージ
+# execute if score @p remain matches 1 run tellraw @a [{"text": "[!]","color": "green","bold": true},{"text": "ゲームを終了します。お疲れ様でした。","color": "green","bold": false}]
+
+# クールタイム用のタイマー
 scoreboard players remove @a[scores={cooltime_time=0..}] cooltime_time 1
 execute store result bossbar cooltime_timer value run scoreboard players get @p cooltime_time
-
 execute if entity @a[scores={cooltime_time=0}] run bossbar remove cooltime_timer
 execute if entity @a[scores={cooltime_time=0}] run title @a title "- 対戦開始 -"
 execute if entity @a[scores={cooltime_time=0}] run function diamondrun:game/timer/battle
